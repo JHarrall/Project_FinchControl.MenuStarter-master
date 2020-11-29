@@ -743,7 +743,12 @@ namespace Project_FinchControl
         #endregion
 
         #region Alarm System
-
+        /// <summary>
+        /// *********************************
+        /// *       Light Alarm Menu        *
+        /// *********************************
+        /// </summary>
+        /// <param name="finchRobot"></param>
         static void LightAlarmDisplayMenuScreen(Finch finchRobot)
         {
 
@@ -811,7 +816,16 @@ namespace Project_FinchControl
             while (!alarmSystemMenu);
 
         }
-
+        /// <summary>
+        /// ****************************************
+        /// *       Runs user input data           *
+        /// ****************************************
+        /// </summary>
+        /// <param name="finchRobot"></param>
+        /// <param name="sensorsToMonitor"></param>
+        /// <param name="rangeType"></param>
+        /// <param name="minMaxThresholdValue"></param>
+        /// <param name="timeToMonitor"></param>
         static void LightAlarmDisplaySetAlarm(Finch finchRobot, string sensorsToMonitor, string rangeType, int minMaxThresholdValue, int timeToMonitor)
         {
 
@@ -890,7 +904,12 @@ namespace Project_FinchControl
             
             DisplayMenuPrompt("Light Alarm");
         }
-
+        /// <summary>
+        /// ************************************
+        /// *       Gets seconds to wait       *
+        /// ************************************
+        /// </summary>
+        /// <returns></returns>        
         static int LightAlarmDisplaySetMaximumTimeToMonitor()
         {
             int timeToMonitor;
@@ -928,7 +947,14 @@ namespace Project_FinchControl
             
             return timeToMonitor;
         }
-
+        /// <summary>
+        /// *****************************************
+        /// *        Gets min/max threshold         *
+        /// *****************************************
+        /// </summary>
+        /// <param name="rangeType"></param>
+        /// <param name="finchRobot"></param>
+        /// <returns></returns>
         static int LightAlarmDisplaySetMinMaxThresholdValue(string rangeType, Finch finchRobot)
         {
             int minMaxThresholdValue;
@@ -969,8 +995,12 @@ namespace Project_FinchControl
             
             return minMaxThresholdValue;
         }
-
-        
+        /// <summary>
+        /// *********************************
+        /// *       Gets which sensor       *
+        /// *********************************
+        /// </summary>
+        /// <returns></returns>
         static string LightAlarmDisplaySetSensorsToMonitor()
         {
             string sensorsToMonitor;
@@ -1028,7 +1058,12 @@ namespace Project_FinchControl
 
             return sensorsToMonitor;
         }
-
+        /// <summary>
+        /// *************************************
+        /// *           Gets Range Type         *
+        /// ************************************* 
+        /// </summary>
+        /// <returns></returns>
         static string LightAlarmDisplaySetRangeType()
         {
             string rangeType;
